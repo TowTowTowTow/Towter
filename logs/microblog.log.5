@@ -1,0 +1,105 @@
+2023-04-07 19:14:11,349 ERROR: Exception on /reset_password_request [GET] [in /Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/app/routes.py", line 157, in reset_password_request
+    form = ResetPasswordRequestForm()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask_wtf/form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Field.__init__() got an unexpected keyword argument 'calidators'
+2023-04-07 19:17:52,236 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:48]
+2023-04-07 19:17:56,930 ERROR: Exception on /reset_password_request [GET] [in /Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/app/routes.py", line 157, in reset_password_request
+    form = ResetPasswordRequestForm()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask_wtf/form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Field.__init__() got an unexpected keyword argument 'calidators'
+2023-04-07 19:18:49,365 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:48]
+2023-04-07 19:18:56,860 ERROR: Exception on /reset_password_request [GET] [in /Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/app/routes.py", line 157, in reset_password_request
+    form = ResetPasswordRequestForm()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 208, in __call__
+    return type.__call__(cls, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask_wtf/form.py", line 73, in __init__
+    super().__init__(formdata=formdata, **kwargs)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 280, in __init__
+    super().__init__(self._unbound_fields, meta=meta_obj, prefix=prefix)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/form.py", line 48, in __init__
+    field = meta.bind_field(self, unbound_field, options)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/meta.py", line 28, in bind_field
+    return unbound_field.bind(form=form, **options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/wtforms/fields/core.py", line 395, in bind
+    return self.field_class(*self.args, **kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Field.__init__() got an unexpected keyword argument 'calidators'
+2023-04-07 19:20:20,538 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:48]

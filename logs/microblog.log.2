@@ -1,0 +1,113 @@
+2023-04-10 12:15:51,073 ERROR: Exception on /index [GET] [in /Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/app/routes.py", line 36, in index
+    return render_template('index.html', title='Home', form=form, posts=posts.items, next_url=next_url, prev_url=prev_url)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/templating.py", line 147, in render_template
+    return _render(app, template, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/templating.py", line 130, in _render
+    rv = template.render(context)
+         ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/jinja2/environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/kyle/projects/tester/app/templates/index.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/jinja2/environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/kyle/projects/tester/app/templates/base.html", line 55, in template
+    {% endblock %}
+jinja2.exceptions.TemplateSyntaxError: Unexpected end of template. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
+2023-04-10 12:19:16,588 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:51]
+2023-04-10 15:36:02,831 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-10 15:43:05,786 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-10 15:45:28,444 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-11 16:59:34,548 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-11 17:01:19,207 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-14 19:18:21,022 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-16 17:07:12,922 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-16 17:07:51,915 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-16 17:08:25,997 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-16 18:58:57,718 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:53]
+2023-04-16 19:08:51,537 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:09:00,324 ERROR: Exception on /index [GET] [in /Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/Users/kyle/projects/tester/app/routes.py", line 39, in index
+    return render_template('index.html', title=_('Home'), form=form,
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask/templating.py", line 146, in render_template
+    template = app.jinja_env.get_or_select_template(template_name_or_list)
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/jinja2/environment.py", line 997, in get_template
+    return self._load_template(name, globals)
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/jinja2/environment.py", line 958, in _load_template
+    template = self.loader.load(self, name, self.make_globals(globals))
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/jinja2/loaders.py", line 125, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask/templating.py", line 62, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/kyle/.pyenv/versions/microblog/lib/python3.10/site-packages/flask/templating.py", line 98, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: index.html
+2023-04-16 19:12:41,164 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:19:25,539 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:19:28,993 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:20:16,646 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:29:33,750 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:29:56,179 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:30:25,459 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:32:40,036 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:33:11,611 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-16 19:33:21,973 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-23 17:35:30,797 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-23 17:37:31,728 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-23 18:56:17,766 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-23 18:56:34,673 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-23 18:58:19,607 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:52]
+2023-04-23 21:09:10,291 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-04-23 21:10:11,898 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-04-23 21:19:12,365 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-04-23 21:24:14,211 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-02 10:56:24,211 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-02 10:57:15,266 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-09 21:03:42,118 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-09 21:20:23,209 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-10 10:50:39,374 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-10 10:52:34,564 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-10 10:53:03,798 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-10 11:09:10,064 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-10 15:06:53,151 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-10 18:31:44,982 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-10 18:32:16,867 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-11 22:50:54,015 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-11 22:51:56,238 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-17 20:40:26,724 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-17 21:43:48,912 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]
+2023-05-17 21:53:36,669 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:74]

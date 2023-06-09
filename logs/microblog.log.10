@@ -1,0 +1,121 @@
+2023-03-29 14:15:44,141 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-03-29 14:15:54,800 ERROR: Exception on /edit_profile [POST] [in /Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 748, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.IntegrityError: UNIQUE constraint failed: user.username
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/app/routes.py", line 85, in edit_profile
+    db.session.commit()
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/scoping.py", line 553, in commit
+    return self._proxied.commit()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1903, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1218, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/state_changes.py", line 137, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1193, in _prepare_impl
+    self.session.flush()
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4155, in flush
+    self._flush(objects)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4291, in _flush
+    with util.safe_reraise():
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/util/langhelpers.py", line 147, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 4252, in _flush
+    flush_context.execute()
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 467, in execute
+    rec.execute(self)
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/unitofwork.py", line 644, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 85, in save_obj
+    _emit_update_statements(
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/orm/persistence.py", line 890, in _emit_update_statements
+    c = connection.execute(
+        ^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1414, in execute
+    return meth(
+           ^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 486, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1638, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1842, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1983, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 2326, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1964, in _exec_single_context
+    self.dialect.do_execute(
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 748, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.IntegrityError: (sqlite3.IntegrityError) UNIQUE constraint failed: user.username
+[SQL: UPDATE user SET username=?, about_me=? WHERE user.id = ?]
+[parameters: ('susan', '', 2)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2023-03-29 14:18:47,017 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-03-30 10:58:11,605 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-03-30 10:58:26,578 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-02 21:32:22,414 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-02 21:58:27,833 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-02 21:59:33,811 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-02 22:02:14,207 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-02 22:05:22,018 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-02 22:06:00,357 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-02 22:06:58,504 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-02 22:20:25,552 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-03 12:43:05,741 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-03 13:30:28,434 INFO: Microblog startup [in /Users/kyle/projects/tester/app/__init__.py:46]
+2023-04-03 13:30:35,208 ERROR: Exception on /index [GET] [in /Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py:1744]
+Traceback (most recent call last):
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 2528, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1825, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1823, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/sirtestalot/lib/python3.11/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/kyle/projects/tester/app/routes.py", line 29, in index
+    page=page, per_page=app.config['POSTS_PER_PAGE'], error_out=False)
+                        ~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+KeyError: 'POSTS_PER_PAGE'
